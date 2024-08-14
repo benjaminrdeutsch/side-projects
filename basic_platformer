@@ -1,0 +1,25 @@
+1 REM Unnamed Platformer
+2 REM B. Deutsch (8/14/24)
+3 REM All comments are on the following line due to missing support for inliners :(
+10 HOME
+20 LET W = 40 : LET H = 22
+21 REM ^ Store screen dimensions
+30 GOSUB 1000
+31 REM ^ Call drawFloor()
+40 GOSUB 2000
+41 REM ^ Call drawPlayer()
+100 END
+
+1000 REM ~ drawFloor() ~
+1010 FOR I = 1 TO W
+1015 FOR J = 0 TO 3
+1020 HTAB I : VTAB H-J
+1030 PRINT "#"
+1035 NEXT J
+1040 NEXT I
+1050 RETURN
+
+2000 REM ~ drawPlayer() ~
+2010 HTAB 8 : VTAB 12
+2020 PRINT "@"
+2030 RETURN
